@@ -1,0 +1,28 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Colours" />
+
+# Colours
+
+Use these through Tailwind classes, e.g. `bg-primary`, `text-secondary-700`, `border-line`, `bg-surface`.
+
+For small text in a colour, use a deep step (700) so it stays readable. The base red and indigo are for fills, icons and large type.
+
+<ColorPalette>
+  <ColorItem title="Ground" subtitle="paper · surface · ink · line" colors={{ paper: '#f3f2f2', surface: '#f8f4f4', ink: '#201e1d', line: 'rgba(32,30,29,0.2)' }} />
+  <ColorItem title="Primary" subtitle="Pixexl red · bg-primary" colors={{ 100: '#fff2ef', 200: '#ffe0d9', 300: '#ffc4b8', 400: '#ff9783', DEFAULT: '#ec3013', 600: '#dd2b0f', 700: '#ae1800', 800: '#7c1405', 900: '#4d170e' }} />
+  <ColorItem title="Secondary" subtitle="Indigo · bg-secondary" colors={{ 100: '#eef0ff', 200: '#dfe1ff', 300: '#c4c6ff', 400: '#9da0fb', DEFAULT: '#4f46e5', 600: '#4338ca', 700: '#3730a3', 800: '#2b2680', 900: '#1c1956' }} />
+  <ColorItem title="Neutral" subtitle="bg-neutral-*" colors={{ 100: '#f8f4f4', 200: '#eae7e7', 300: '#d7d3d3', 400: '#bab6b6', 500: '#9b9797', 600: '#7d7979', 700: '#605d5d', 800: '#444141', 900: '#2d2b2b' }} />
+  <ColorItem title="Status" subtitle="success · trustpilot" colors={{ success: '#22a06b', trustpilot: '#00b67a' }} />
+</ColorPalette>
+
+## Radius
+
+| Token | Value | Class | Used for |
+| --- | --- | --- | --- |
+| pill | 999px | `rounded-full` | Buttons, tags, nav bar, option pills |
+| input | 14px | `rounded-[14px]` | Text fields |
+| bubble | 18px | `rounded-bubble` | Chat bubbles |
+| tile | 24px | `rounded-tile` | Small cards, review cards, process steps |
+| card | 28px | `rounded-card` | Service groups, forms, mobile menu |
+| panel | 32px | `rounded-panel` | Case studies, dark panel, closing banner |

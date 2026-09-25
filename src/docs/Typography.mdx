@@ -1,0 +1,26 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Geist for everything, weight 600 for headings and 400 for body. Geist Mono, uppercase with 0.04em tracking, for kickers, numbers and tags.
+
+## Headings
+
+<Typeset fontFamily="Geist" fontWeight={600} fontSizes={[96, 84, 44, 24, 18]} sampleText="Better tools for your team." />
+
+| Role | Size | Class |
+| --- | --- | --- |
+| Hero | clamp(44px, 7vw, 96px) | `SectionHeader size="hero"` |
+| Page title | clamp(44px, 6vw, 84px) | `SectionHeader size="page"` |
+| Section title | clamp(30px, 3.6vw, 44px) | `SectionHeader` |
+| Card title | 24px | `CardTitle` |
+
+## Body
+
+<Typeset fontFamily="Geist" fontWeight={400} fontSizes={[18, 16, 14]} sampleText="We look at how your business runs, spot where your team gets slowed down, and build AI tools that make their day easier." />
+
+## Mono labels
+
+<Typeset fontFamily="Geist Mono" fontWeight={400} fontSizes={[13, 12]} sampleText="CASE STUDIES · 01 · NEXT.JS" />

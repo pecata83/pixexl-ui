@@ -1,0 +1,112 @@
+/*
+ * @pixexl/ui theme for Tailwind CSS v4.
+ *
+ * In your app's global stylesheet:
+ *   @import "tailwindcss";
+ *   @import "@pixexl/ui/theme.css";
+ *
+ * The @source line below tells Tailwind to scan this package's compiled
+ * components for class names, so you don't need to configure it yourself.
+ */
+@source "./";
+
+@theme {
+  /* Surfaces and ink */
+  --color-paper: #f3f2f2;
+  --color-surface: #f8f4f4;
+  --color-ink: #201e1d;
+  --color-line: color-mix(in srgb, #201e1d 20%, transparent);
+
+  /* Primary: Pixexl red. Actions, the closing banner, small emphasis. */
+  --color-primary: #ec3013;
+  --color-primary-100: #fff2ef;
+  --color-primary-200: #ffe0d9;
+  --color-primary-300: #ffc4b8;
+  --color-primary-400: #ff9783;
+  --color-primary-500: #ff563c;
+  --color-primary-600: #dd2b0f;
+  --color-primary-700: #ae1800;
+  --color-primary-800: #7c1405;
+  --color-primary-900: #4d170e;
+
+  /* Secondary: indigo. AI moments, labels, tags, dark panels. */
+  --color-secondary: #4f46e5;
+  --color-secondary-100: #eef0ff;
+  --color-secondary-200: #dfe1ff;
+  --color-secondary-300: #c4c6ff;
+  --color-secondary-400: #9da0fb;
+  --color-secondary-500: #6a63ee;
+  --color-secondary-600: #4338ca;
+  --color-secondary-700: #3730a3;
+  --color-secondary-800: #2b2680;
+  --color-secondary-900: #1c1956;
+
+  /* Neutral ramp (overrides Tailwind's neutral) */
+  --color-neutral-100: #f8f4f4;
+  --color-neutral-200: #eae7e7;
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+  --color-neutral-900: #2d2b2b;
+
+  --color-success: #22a06b;
+  --color-trustpilot: #00b67a;
+
+  /* Type. Load Geist with the `geist` package (see README); these fall back to the Geist webfont name. */
+  --font-sans: var(--font-geist-sans, "Geist"), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono, "Geist Mono"), ui-monospace, SFMono-Regular, monospace;
+
+  /* Corners */
+  --radius-tile: 24px;
+  --radius-card: 28px;
+  --radius-panel: 32px;
+  --radius-bubble: 18px;
+
+  /* Elevation, tuned to the paper ground */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+
+  /* Content width */
+  --container-page: 1200px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  a {
+    color: var(--color-secondary-700);
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: var(--color-secondary);
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--color-secondary) 25%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 72px);
+}
