@@ -1,6 +1,6 @@
 {
   "name": "@pixexl/ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pixexl design system: React components and a Tailwind CSS v4 theme.",
   "license": "MIT",
   "type": "module",
