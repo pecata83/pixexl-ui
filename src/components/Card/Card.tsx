@@ -25,7 +25,7 @@ export const cardVariants = cva('text-ink', {
   defaultVariants: { tone: 'surface', radius: 'card', padding: 'md' },
 });
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof cardVariants> {
+export interface CardProps extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof cardVariants> {
   as?: 'div' | 'article' | 'section' | 'li' | 'figure';
 }
 
