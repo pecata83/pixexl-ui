@@ -8,7 +8,7 @@
  * The @source line below tells Tailwind to scan this package's compiled
  * components for class names, so you don't need to configure it yourself.
  */
-@source "./";
+@source "../";
 
 @theme {
   /* Surfaces and ink */
@@ -56,8 +56,11 @@
   --color-trustpilot: #00b67a;
 
   /* Type. Load Geist with the `geist` package (see README); these fall back to the Geist webfont name. */
-  --font-sans: var(--font-geist-sans, "Geist"), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono, "Geist Mono"), ui-monospace, SFMono-Regular, monospace;
+  --font-sans:
+    var(--font-geist-sans, 'Geist'), ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    var(--font-geist-mono, 'Geist Mono'), ui-monospace, SFMono-Regular,
+    monospace;
 
   /* Corners */
   --radius-tile: 24px;
@@ -84,7 +87,10 @@
     font-family: var(--font-sans);
     text-wrap: pretty;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-weight: 600;
     text-wrap: balance;
   }
