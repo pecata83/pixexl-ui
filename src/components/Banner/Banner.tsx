@@ -2,7 +2,8 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../lib/cn.js';
 
-export const bannerVariants = cva('flex flex-col items-start gap-9 rounded-panel p-[clamp(40px,6vw,80px)] text-paper', {
+/** Pure white text on every tone so body-size copy passes 4.5:1 on the red field. */
+export const bannerVariants = cva('flex flex-col items-start gap-9 rounded-panel p-[clamp(40px,6vw,80px)] text-white', {
   variants: {
     tone: {
       primary: 'bg-primary',
@@ -27,7 +28,7 @@ export function Banner({ title, description, action, tone, as: Heading = 'h2', c
     <section className={cn(bannerVariants({ tone }), className)} {...props}>
       <div className="flex flex-col gap-4">
         <Heading className="m-0 text-[clamp(40px,5.4vw,72px)] font-semibold leading-[1.03] tracking-[-0.03em]">{title}</Heading>
-        {description ? <p className="m-0 max-w-[48ch] text-lg leading-relaxed">{description}</p> : null}
+        {description ? <p className="m-0 max-w-[52ch] text-lg leading-relaxed">{description}</p> : null}
       </div>
       {action}
     </section>

@@ -3,6 +3,8 @@ import { cva, type VariantProps } from 'class-variance-authority';
 /**
  * Kept in its own (server-safe) module so server components can style
  * links as buttons: <Link className={buttonVariants({ variant: 'secondary' })} />
+ *
+ * Text on the red fill is pure white: #fff on primary (#e02d12) is 4.6:1 (WCAG AA).
  */
 export const buttonVariants = cva(
   [
@@ -14,10 +16,10 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-primary text-paper hover:bg-primary-600 hover:text-paper active:bg-primary-700',
+        primary: 'bg-primary text-white hover:bg-primary-600 hover:text-white active:bg-primary-700',
         secondary: 'border border-line bg-transparent text-ink hover:bg-ink/5 hover:text-ink active:bg-ink/10',
         ghost: 'bg-transparent text-secondary-700 hover:bg-secondary/10 hover:text-secondary-700 active:bg-secondary/15',
-        inverse: 'border border-paper bg-transparent text-paper hover:bg-paper hover:text-primary',
+        inverse: 'border border-white bg-transparent text-white hover:bg-white hover:text-primary',
       },
       size: {
         sm: 'h-9 px-4 text-sm',

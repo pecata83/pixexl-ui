@@ -11,8 +11,8 @@ import { ServiceGroupSummary } from '../site/ServiceGroupList';
 import { faqs } from '../content/faqs';
 import { reviews } from '../content/reviews';
 import { opportunities, processSteps } from '../content/services';
-import { site } from '../content/site';
 import { homePage } from '../cms';
+
 export function HomePage() {
   return (
     <main>
@@ -87,6 +87,20 @@ export function HomePage() {
         </ol>
       </section>
 
+      {/* Why Pixexl */}
+      <section className="container-page pb-[clamp(64px,8vw,104px)]">
+        <div className="flex flex-wrap gap-x-18 gap-y-6 border-t border-line pt-[clamp(40px,5vw,64px)]">
+          <SectionHeader kicker={homePage.why.kicker} title={homePage.why.title} className="min-w-0 flex-[1_1_320px] items-start" />
+          <div className="flex min-w-0 max-w-[64ch] flex-[2_1_420px] flex-col gap-4 text-[17px] leading-relaxed">
+            {homePage.why.body.map((p, i) => (
+              <p key={i} className={i === 0 ? 'm-0' : 'm-0 text-neutral-800'}>
+                {p}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews */}
       <section className="container-page flex flex-col gap-8 pt-[clamp(40px,5vw,64px)]">
         <SectionHeader
@@ -98,7 +112,6 @@ export function HomePage() {
             <ReviewCard key={i} quote={r.quote} name={r.name} company={r.company} rating={r.rating} />
           ))}
         </div>
-        <p className="m-0 text-sm text-neutral-500">{site.trustpilotUrl}</p>
       </section>
 
       {/* FAQ */}
