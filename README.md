@@ -176,8 +176,8 @@ One-time setup:
 Each release:
 
 ```bash
-npm version patch     # or minor / major
-git push --follow-tags
+npm version patch     # or minor / major — bumps the version in package.json, commits the change, and creates a git tag
+git push --follow-tags  # pushes the commit and the new tag to GitHub, which triggers the Release workflow
 ```
 
 The **Release** workflow runs the type check, tests and build, then publishes with provenance. The **CI** workflow runs the same checks and a Storybook build on every pull request.
