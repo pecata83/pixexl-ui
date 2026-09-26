@@ -5,7 +5,7 @@ function Dot({ accent }: { accent: 'primary' | 'ink' }) {
   return <span aria-hidden className={`block size-2.5 rounded-full ${accent === 'primary' ? 'bg-primary' : 'bg-ink'}`} />;
 }
 
-/** Full service list with descriptions (Services page). */
+/** Full service list with descriptions (Services page). Number stacks above the text on small screens. */
 export function ServiceGroupList() {
   return (
     <div className="flex flex-col gap-4">
@@ -19,9 +19,9 @@ export function ServiceGroupList() {
             <span className="text-[15px] text-neutral-700">{g.note}</span>
           </div>
           {g.items.map((s) => (
-            <div key={s.title} className="grid grid-cols-[64px_minmax(0,1fr)] gap-x-6 gap-y-2 border-t border-line py-7">
-              <span className="pt-1.5 font-mono text-sm text-neutral-600">{s.num}</span>
-              <div className="grid gap-x-12 gap-y-3 md:grid-cols-2">
+            <div key={s.title} className="flex flex-col gap-x-6 gap-y-2 border-t border-line py-7 sm:flex-row">
+              <span className="font-mono text-sm text-neutral-600 sm:w-16 sm:shrink-0 sm:pt-1.5">{s.num}</span>
+              <div className="grid min-w-0 flex-1 gap-x-12 gap-y-3 md:grid-cols-2">
                 <div className="flex flex-col items-start gap-2.5">
                   <h3 className="m-0 text-2xl leading-tight">{s.title}</h3>
                   <Tag>{s.tag}</Tag>

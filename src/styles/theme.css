@@ -18,13 +18,13 @@
   --color-line: color-mix(in srgb, #201e1d 20%, transparent);
 
   /* Primary: Pixexl red. Actions, the closing banner, small emphasis. */
-  --color-primary: #ec3013;
+  --color-primary: #e02d12;
   --color-primary-100: #fff2ef;
   --color-primary-200: #ffe0d9;
   --color-primary-300: #ffc4b8;
   --color-primary-400: #ff9783;
   --color-primary-500: #ff563c;
-  --color-primary-600: #dd2b0f;
+  --color-primary-600: #c9260d;
   --color-primary-700: #ae1800;
   --color-primary-800: #7c1405;
   --color-primary-900: #4d170e;

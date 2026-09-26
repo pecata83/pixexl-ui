@@ -57,8 +57,8 @@ export const opportunities = [
 ];
 
 export const processSteps = [
-  { when: 'Weeks 1–2', title: 'Audit', copy: 'We talk to you and your team, look at your tools and processes, and listen to what slows people down.' },
-  { when: 'Week 3', title: 'Plan', copy: "You get a prioritised list of what to build, ordered by impact, with rough costs against each." },
-  { when: 'Weeks 4–8', title: 'Build', copy: 'We build and test the tools with your team, and connect them to the software you already use.' },
-  { when: 'Monthly', title: 'Improve', copy: "We check what's working, tune it, and pick the next thing to tackle." },
+  { when: "Weeks 1–2", title: "Audit", copy: "First, we talk to you and your team, look at your tools and processes, and listen to what slows people down. We map each workflow so we can see where time is lost." },
+  { when: "Week 3", title: "Plan", copy: "Next, you get a prioritised roadmap of what to build, ordered by impact, with rough costs and expected ROI against each. We usually suggest one proof of concept to start." },
+  { when: "Weeks 4–8", title: "Build", copy: "Then we build and test the tools with your team, and connect them to your CRM, booking system and other software through their APIs. A person reviews anything the AI isn't sure about." },
+  { when: "Monthly", title: "Improve", copy: "After launch, we check what's working, tune the prompts and automations, and pick the next thing to tackle. Monthly reports show the time saved and where the tools still need work." },
 ];
