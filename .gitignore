@@ -35,3 +35,6 @@ pnpm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# Visual regression – baseline snapshots are committed; diffs and failures are not
+src/__image_snapshots__/__diff_output__/

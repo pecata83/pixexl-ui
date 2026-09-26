@@ -1,0 +1,9 @@
+export const faqs = [
+  { question: 'What does an AI business audit involve?', answer: "Usually one or two weeks. We talk to a few people, look at the tools you use and what slows people down, then give you a written list of ideas ranked by how much they'd help and what they'd cost. It's yours to keep, even if you build it with someone else." },
+  { question: 'Will a chatbot annoy our customers?', answer: "Not if it's done properly. Ours only answer from your own information, say so when they don't know, and hand over to a person when they should. We test them on real questions before they go live." },
+  { question: 'What happens to our data?', answer: 'We build on your own accounts with providers like OpenAI, Anthropic or Google, so your data stays under your control. We set things up with UK GDPR in mind, and can keep everything inside your own cloud if you need that.' },
+  { question: 'What makes a website AI-friendly?', answer: "It's fast, the content is clearly structured, and there's structured data underneath, so AI tools can read it and describe you accurately. It's also built so that adding a chatbot or booking assistant later is simple." },
+  { question: 'How long does a project take?', answer: "An audit takes one to two weeks. A chatbot or automation is usually live in three to six weeks, and a new website in six to ten. We'll give you a proper timeline after the first call." },
+  { question: 'What are AEO and GEO?', answer: 'Ways of getting your business mentioned when people ask AI tools for recommendations. AEO is about making your own pages easy to quote. GEO is about the reviews, listings and articles elsewhere that AI models learn from.' },
+  { question: 'Do you work with businesses outside the UK?', answer: "Yes. We're based in the UK but work with clients around Europe too, including a few in Greece." },
+];
